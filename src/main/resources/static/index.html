@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <HTML>
 <HEAD>
@@ -10,10 +12,13 @@
 
 <button onclick="versturen()">Send name of boot</button>
 <input type="text" id="bootnaamvak" class="form-control mb-4" placeholder="Vul boot naam in">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
         function versturen()
+
         {
+        $('#bootnaamvak').hide();
         var bootnaam = document.getElementById("bootnaamvak").value;
         alert(bootnaam);
         }
