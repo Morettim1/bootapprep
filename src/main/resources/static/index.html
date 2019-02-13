@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <HTML>
 <HEAD>
@@ -17,16 +16,21 @@
 <script>
         $(document).on('click', '#verhuurbutton', function()
         {
-           $.ajax ({
-            type: "GET",
-            url: "/hallo",
-            success: function(result)
-                {
-                    alert(result);
-                }
+           $.ajax
+            ({
+                type: "GET",
+                url: "/hallo",
+                success: function(result)
+                    {
+                        returnfunctie(result);
+                    }
             });
         });
 
+function returnfunctie(antwoordserver)
+    {
+        alert(antwoordserver);
+    }
     </script>
 
 </BODY>

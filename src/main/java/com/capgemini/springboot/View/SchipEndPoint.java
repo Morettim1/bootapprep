@@ -8,6 +8,6 @@ public class SchipEndPoint {
     @GetMapping("hallo")
     public String lopen(){
         System.out.println("go");
-        return "jojo";
+        return "jojo dit werkt";
     }
 }
