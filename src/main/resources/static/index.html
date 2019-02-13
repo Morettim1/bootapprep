@@ -59,8 +59,10 @@ $(document).on('click', '#ophaalbutton', function()
     {
         $('#alleschepen').html(antwoordserver);
 
+var opbouwstring = "<table>";
+
         for (i = 0; i < antwoordserver.length; i++) {
-        document.getElementById('alleschepen').innerHTML += antwoordserver[i].naam;
+        document.getElementById('alleschepen').innerHTML += antwoordserver[i].naam + "<br>";
         };
 
 
