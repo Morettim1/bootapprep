@@ -6,5 +6,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface SchipRepository extends CrudRepository<Schip, Long> {
-    
+
+
 }

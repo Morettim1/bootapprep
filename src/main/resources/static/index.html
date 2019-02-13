@@ -10,8 +10,16 @@
 <BODY>
 
 <button id = "verhuurbutton">Send name of boot</button>
-<input type="text" id="bootnaamvak" class="form-control mb-4" placeholder="Vul boot naam in">
+<input type="text" id="vakjesnaam" class="form-control mb-4" placeholder="Vul boot naam in">
+<div id="naamschip">antwoord</div>
+
+<br>
+<button id = "ophaalbutton">Alle boten ophalen</button>
+<div id="alleschepen">antwoord</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 
 <script>
         $(document).on('click', '#verhuurbutton', function()
@@ -27,9 +35,36 @@
             });
         });
 
-function returnfunctie(antwoordserver)
+$(document).on('click', '#ophaalbutton', function()
+        {
+           $.ajax
+            ({
+                type: "GET",
+                url: "/ophalen",
+                success: function(result)
+                    {
+                        ophaalfunctie(result);
+                    }
+            });
+        });
+
+
+   function returnfunctie(antwoordserver)
+        {
+            $('#naamschip').html(antwoordserver.naam);
+                alert(antwoordserver);
+        }
+
+   function ophaalfunctie(antwoordserver)
     {
-        alert(antwoordserver);
+        $('#alleschepen').html(antwoordserver);
+
+        for (i = 0; i < antwoordserver.length; i++) {
+        document.getElementById('alleschepen').innerHTML += antwoordserver[i].naam;
+        };
+
+
+
     }
     </script>
 
