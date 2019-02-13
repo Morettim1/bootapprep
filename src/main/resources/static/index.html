@@ -10,18 +10,23 @@
 
 <BODY>
 
-<button onclick="versturen()">Send name of boot</button>
+<button id = "verhuurbutton">Send name of boot</button>
 <input type="text" id="bootnaamvak" class="form-control mb-4" placeholder="Vul boot naam in">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
-        function versturen()
-
+        $(document).on('click', '#verhuurbutton', function()
         {
-        $('#bootnaamvak').hide();
-        var bootnaam = document.getElementById("bootnaamvak").value;
-        alert(bootnaam);
-        }
+           $.ajax ({
+            type: "GET",
+            url: "/hallo",
+            success: function(result)
+                {
+                    alert(result);
+                }
+            });
+        });
+
     </script>
 
 </BODY>
