@@ -1,17 +1,23 @@
 <!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
 <HTML>
-    <HEAD>
-        <TITLE>
-            A Small Hello
-        </TITLE>
-    </HEAD>
-    <BODY>
-        <button onclick="versturen()">Klik hier voor boten</button>
-    <script>
+<HEAD>
+    <TITLE>
+        Hello! Welcome to Springboot
+    </TITLE>
+</HEAD>
+
+<BODY>
+
+<button onclick="versturen()">Send name of boot</button>
+<input type="text" id="bootnaamvak" class="form-control mb-4" placeholder="Vul boot naam in">
+
+<script>
         function versturen()
         {
-        alert("versturen");
+        var bootnaam = document.getElementById("bootnaamvak").value;
+        alert(bootnaam);
         }
     </script>
-    </BODY>
+
+</BODY>
 </HTML>
